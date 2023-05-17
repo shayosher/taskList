@@ -8,7 +8,7 @@ export default function AllTasks(props) {
       <div id='AllTasksDiv'>
         <hr style={{ border: 'solid black 2px' }} />
         {props.tasks.map((val, index) => {
-          return <button id='allTaskButton'><Task val={val} index={index} key={index} /></button>
+          return <button id='allTaskButton'><Task val={val} index={index} key={index} deleteTask={props.deleteTask}/></button>
         })}
       </div>
     </div>

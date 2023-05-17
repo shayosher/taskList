@@ -18,12 +18,16 @@ function App() {
       return <Menu setShowMenu={setShowMenu} />
     }
   }
+  const deleteTask = (i) => {
+    let deleteTask = tasks.filter((val, index) => (i != index));
+    setTasks([...deleteTask]);
+  }
   return (
     <div className="App">
         <HashRouter>
           <Routes>
             <Route path='/' element={<SignIn users={users} setShowMenu={setShowMenu} />} />
-            <Route path='/allTasks' element={<AllTasks tasks={tasks}/>} />
+            <Route path='/allTasks' element={<AllTasks tasks={tasks} deleteTask={deleteTask}/>} />
             <Route path='/myTasks' element={<MyTasks />} />
             <Route path='/newTask' element={<NewTask />} />
             <Route path='/history' element={<History />} />

@@ -12,7 +12,7 @@ export default function task(props) {
 
     const show = () => {
         if (showDetails) {
-            return <Detail val={props.val}/>
+            return <Detail val={props.val} index={props.index} deleteTask={props.deleteTask}/>
         }
     }
     return (
