@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+#signInMainDiv {
+  background-image: url('./components/pictures/signInbackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signInHader {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#signInSecondDiv {
+  border: 3px solid black;
+  border-radius: 70%;
+  margin-top: 50px;
+  width: 20%;
+  background-color: white;
+}
+
+#menuDiv {
+  display: flex;
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: space-between;
+}
+
+.menuButton {
+  width: 150px;
+  height: 35px;
+  background-image: url('./components/pictures/menubuttons.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.pagesDivs {
+  border: 5px black solid;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-image: url('./components/pictures/alltaskbackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#AllTasksDiv {
+  text-align: left;
+}
+
+#allTaskButton {
+  padding: 0px;
+border-radius: 15px;
+}
+
+#taskDiv {}
+
+#taskH3 {
+  margin: 0px;
+
+}
+
+#taskbutton {
+  border-radius: 20px;
+  background-color: white;
+}
