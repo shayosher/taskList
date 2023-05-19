@@ -53,19 +53,25 @@
 }
 
 #AllTasksDiv {
-  text-align: left;
+
 }
 
 #allTaskButton {
   padding: 0px;
-border-radius: 15px;
+  border-radius: 15px;
+  margin-left: 0%;
+  margin-right: 50%;
+  width: 40%;
+
 }
 
-#taskDiv {}
+#taskDiv {
+}
 
 #taskH3 {
   margin: 0px;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 #taskbutton {
