@@ -78,3 +78,25 @@
   border-radius: 20px;
   background-color: white;
 }
+
+#newTaskDiv{
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#historyDiv{
+  
+  background-color: white;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border: 3px black solid;
+  
+}
+
+#historyH3{
+  text-align: left;
+  margin: 0%;
+}
