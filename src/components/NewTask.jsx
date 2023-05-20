@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom';
 export default function NewTask(props) {
   const nav = useNavigate();
   const [taskName, setTaskName] = useState('');
-  const [operator, setOperator] = useState('');
+  const [worker, setWorker] = useState('');
   const [description, setDescription] = useState('');
   const addTask = () => {
     if (taskName == '') {
       alert('Insert task name');
       return
     }
-    if (operator == '') {
+    if (worker == '') {
       alert('Insert worker name');
       return
     }
@@ -20,7 +20,7 @@ export default function NewTask(props) {
       alert('Insert description');
       return
     }
-    props.addNewTask(taskName, operator, description);
+    props.addNewTask(taskName, worker, description);
     alert('Task added')
     nav('/allTasks')
   }
@@ -32,7 +32,7 @@ export default function NewTask(props) {
 
         <input onChange={(e) => { setTaskName(e.target.value) }} type="text" placeholder='Task name' />
 
-        <select onChange={(e) => { setOperator(e.target.value) }}>
+        <select onChange={(e) => { setWorker(e.target.value) }}>
           <option disabled selected>Worker name</option>
           {props.users.map((val) => {
             return <option value={val.userName}>{val.userName}</option>

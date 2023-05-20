@@ -9,7 +9,7 @@ export default function History(props) {
       <hr style={{border:'solid black 2px'}}/>
       <div id='historyDiv'>
       {props.history.map((val)=>{
-        return  <h3 id='historyH3'><span style={{marginLeft:'10px',marginRight:'20px'}}> Task name: {val.taskName}</span>  Operator: {val.operator} <hr /></h3>
+        return  <h3 id='historyH3'><span style={{marginLeft:'10px',marginRight:'20px'}}> Task name: {val.taskName}</span>  worker: {val.worker} <hr /></h3>
 
       })}
       </div>

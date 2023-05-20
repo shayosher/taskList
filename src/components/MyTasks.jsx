@@ -2,7 +2,7 @@ import React from 'react'
 import Task from './Task'
 
 export default function MyTasks(props) {
-  const filteredTasks = props.tasks.filter((task) => task.operator === props.currentUser);
+  const filteredTasks = props.tasks.filter((task) => task.worker === props.currentUser);
 
   return (
     <div className='pagesDivs'>

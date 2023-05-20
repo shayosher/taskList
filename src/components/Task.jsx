@@ -17,7 +17,7 @@ export default function task(props) {
     }
     return (
         <div id='taskDiv'>
-            <h3 id='taskH3'><span style={{marginLeft:'10px',marginRight:'20px'}}> Task name: {props.val.taskName}</span>  Operator: {props.val.operator} <button id='taskbutton' onClick={() => {setShowDetails(!showDetails); toggleExpanded() }}> {isExpanded ? (<span>&#9650;</span> ):( <span>&#9660;</span>)}</button></h3>
+            <h3 id='taskH3'><span style={{marginLeft:'10px',marginRight:'20px'}}> Task name: {props.val.taskName}</span>  Operator: {props.val.worker} <button id='taskbutton' onClick={() => {setShowDetails(!showDetails); toggleExpanded() }}> {isExpanded ? (<span>&#9650;</span> ):( <span>&#9660;</span>)}</button></h3>
             {show()}
         </div>
     )
