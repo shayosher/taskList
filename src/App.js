@@ -28,21 +28,11 @@ function App() {
     .then((data)=>{
       setTasks(data)
     })
-  },[flag1])
-
-  useEffect(()=>{
-    fetch('/getUsersData')
-    .then((res)=>{
-      return res.json()
-    })
-    .then((data)=>{
-      setUsers(data)
-    })
-  },[flag2])
+  },[flag1]);
 
   const addNewTask = (taskName, worker, description) => {
     // setTasks([...tasks,{taskName,worker,description}])
-    let temp = {
+    let tasktemp = {
       taskName,
       worker,
       description
@@ -65,9 +55,19 @@ function App() {
       })
   }
 
+  useEffect(()=>{
+    fetch('/getUsersData')
+    .then((res)=>{
+      return res.json()
+    })
+    .then((data)=>{
+      setUsers(data)
+    })
+  },[flag2]);
+
   const addNewUser = (userName,password)=>{
     // setUsers([...users,{userName,password}])
-    let temp = {
+    let usertemp = {
       userName,
       password,
     }
@@ -87,18 +87,41 @@ function App() {
       .catch((err) => {
         console.log(err);
       })
-  }
+  };
+
+  // const deleteTask = (tasktodelete) => {
+  //   let deleteTask = tasks.filter((val) => (val != tasktodelete));
+  //   setHistory([...history, tasktodelete])
+  //   setTasks([...deleteTask]);
+  // };
+  
+  const deleteTask = (tasktodelete) => {
+
+    setHistory([...history, tasktodelete]);
+
+    fetch('/deleteTask', {
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      method: 'delete',
+      body: JSON.stringify({
+        tasktodelete
+      })
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        setFlag1(!flag1)
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  };
 
   const show = () => {
     if (showMenu) {
       return <Menu setShowMenu={setShowMenu} />
     }
-  }
-  const deleteTask = (tasktodelete) => {
-    let deleteTask = tasks.filter((val) => (val != tasktodelete));
-    setHistory([...history, tasktodelete])
-    setTasks([...deleteTask]);
-  }
+  };
 
   return (
     <div className="App">
