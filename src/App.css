@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-#signInMainDiv {
+.signInUpMainDivs{
   background-image: url('./components/pictures/signInbackground.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,6 +22,15 @@
   border-radius: 70%;
   margin-top: 50px;
   width: 20%;
+  background-color: white;
+}
+
+#signUpSecondDiv{
+  border: 3px solid black;
+  border-radius: 70%;
+  margin-top: 50px;
+  width: 20%;
+
   background-color: white;
 }
 
