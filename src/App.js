@@ -19,6 +19,7 @@ function App() {
   const [history, setHistory] = useState([]);
   const [flag1, setFlag1] = useState(false);
   const [flag2, setFlag2] = useState(false);
+  const [flag3, setFlag3] = useState(false);
   
   useEffect(()=>{
     fetch('/getTasksData')
@@ -94,10 +95,20 @@ function App() {
   //   setHistory([...history, tasktodelete])
   //   setTasks([...deleteTask]);
   // };
+
+  useEffect(()=>{
+    fetch('/getHistoryData')
+    .then((res)=>{
+      return res.json()
+    })
+    .then((data)=>{
+      setHistory(data)
+    })
+  },[flag3]);
   
   const deleteTask = (tasktodelete) => {
 
-    setHistory([...history, tasktodelete]);
+    // setHistory([...history, tasktodelete]);
 
     fetch('/deleteTask', {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -110,11 +121,28 @@ function App() {
         return res.json()
       })
       .then((data) => {
-        setFlag1(!flag1)
+        setFlag1(!flag1);
       })
       .catch((err) => {
         console.log(err);
       })
+
+      fetch('/addToHistory', {
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        method: 'post',
+        body: JSON.stringify({
+          tasktodelete
+        })
+      })
+        .then((res) => {
+          return res.json()
+        })
+        .then((data) => {
+          setFlag3(!flag3)
+        })
+        .catch((err) => {
+          console.log(err);
+        })
   };
 
   const show = () => {

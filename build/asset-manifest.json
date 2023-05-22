@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.86ab83f5.css",
-    "main.js": "/static/js/main.b1242d57.js",
-    "static/js/787.4e84918e.chunk.js": "/static/js/787.4e84918e.chunk.js",
-    "static/media/signInbackground.jpg": "/static/media/signInbackground.f5b24953907cc353d9a4.jpg",
-    "static/media/alltaskbackground.jpg": "/static/media/alltaskbackground.3c5b63b0399c42fc543d.jpg",
-    "index.html": "/index.html",
-    "main.86ab83f5.css.map": "/static/css/main.86ab83f5.css.map",
-    "main.b1242d57.js.map": "/static/js/main.b1242d57.js.map",
-    "787.4e84918e.chunk.js.map": "/static/js/787.4e84918e.chunk.js.map"
+    "main.css": "/tasklist/static/css/main.7fe4ca63.css",
+    "main.js": "/tasklist/static/js/main.c282f9a2.js",
+    "static/js/787.4e84918e.chunk.js": "/tasklist/static/js/787.4e84918e.chunk.js",
+    "static/media/signInbackground.jpg": "/tasklist/static/media/signInbackground.f5b24953907cc353d9a4.jpg",
+    "static/media/alltaskbackground.jpg": "/tasklist/static/media/alltaskbackground.3c5b63b0399c42fc543d.jpg",
+    "index.html": "/tasklist/index.html",
+    "main.7fe4ca63.css.map": "/tasklist/static/css/main.7fe4ca63.css.map",
+    "main.c282f9a2.js.map": "/tasklist/static/js/main.c282f9a2.js.map",
+    "787.4e84918e.chunk.js.map": "/tasklist/static/js/787.4e84918e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86ab83f5.css",
-    "static/js/main.b1242d57.js"
+    "static/css/main.7fe4ca63.css",
+    "static/js/main.c282f9a2.js"
   ]
 }
