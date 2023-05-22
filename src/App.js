@@ -102,6 +102,7 @@ function App() {
       return res.json()
     })
     .then((data)=>{
+      console.log('history')
       setHistory(data)
     })
   },[flag3]);
@@ -122,6 +123,7 @@ function App() {
       })
       .then((data) => {
         setFlag1(!flag1);
+        setHistory([...history, tasktodelete]);
       })
       .catch((err) => {
         console.log(err);
