@@ -8,6 +8,8 @@ import NewTask from './components/NewTask';
 import History from './components/History';
 import Menu from './components/Menu';
 import SignUp from './components/SignUp';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 function App() {
   // const [users, setUsers] = useState([{ userName: 'nadav', password: '1234' }, { userName: 'itay', password: '1234' }]);
@@ -15,7 +17,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
-  const [currentUser, setCuurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState();
   const [history, setHistory] = useState([]);
   const [flag1, setFlag1] = useState(false);
   const [flag2, setFlag2] = useState(false);
@@ -109,8 +111,6 @@ function App() {
   
   const deleteTask = (tasktodelete) => {
 
-    // setHistory([...history, tasktodelete]);
-
     fetch('/deleteTask', {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       method: 'delete',
@@ -157,7 +157,7 @@ function App() {
     <div className="App">
       <HashRouter>
         <Routes>
-          <Route path='/' element={<SignIn users={users} setShowMenu={setShowMenu} setCuurrentUser={setCuurrentUser} />} />
+          <Route path='/' element={<SignIn users={users} setShowMenu={setShowMenu} setCurrentUser={setCurrentUser} />} />
           <Route path='/signUp' element={<SignUp addNewUser={addNewUser}/>} />
           <Route path='/allTasks' element={<AllTasks tasks={tasks} deleteTask={deleteTask} />} />
           <Route path='/myTasks' element={<MyTasks tasks={tasks} currentUser={currentUser} deleteTask={deleteTask} />} />

@@ -15,7 +15,7 @@ export default function SignIn(props) {
         }
         nav('/allTasks');
         props.setShowMenu(true);
-        props.setCuurrentUser(username)
+        props.setCurrentUser(username)
     }
     return (
         <div className='signInUpMainDivs'>

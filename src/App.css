@@ -81,6 +81,10 @@
   margin: 0px;
   display: flex;
   justify-content: space-between;
+  transition: transform 0.3s; /* Add a transition for smooth animation */
+}
+#taskH3:hover {
+  transform: translate(-5px, -10px);
 }
 
 #taskbutton {
